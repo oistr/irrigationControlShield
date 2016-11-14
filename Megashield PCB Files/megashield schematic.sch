@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1100,55 +1100,6 @@ More EAGLE documentation at: http://www.element14.com/community/community/knode/
 </deviceset>
 </devicesets>
 </library>
-<library name=" 2-Pin Through-Hole Screw-Terminal">
-<packages>
-<package name="P1">
-<pad name="P$1" x="-2.54" y="0" drill="1.3" shape="octagon" rot="R90"/>
-<pad name="P$2" x="2.54" y="0" drill="1.3" shape="octagon" rot="R180"/>
-<text x="-5.5" y="-5.5" size="0.75" layer="25">OSTTC022162 ScrewT</text>
-<text x="-5.5" y="4.75" size="0.75" layer="25">&gt;NAME</text>
-<text x="-7.5" y="0" size="0.75" layer="21">P1</text>
-<text x="6.5" y="0" size="0.75" layer="21">P2</text>
-<wire x1="-5.58" y1="4.2" x2="5.58" y2="4.2" width="0.254" layer="21"/>
-<wire x1="-5.58" y1="-4.2" x2="5.58" y2="-4.2" width="0.254" layer="21"/>
-<wire x1="-5.58" y1="-4.2" x2="-5.58" y2="4.2" width="0.254" layer="21"/>
-<wire x1="5.58" y1="-4.2" x2="5.58" y2="4.2" width="0.254" layer="21"/>
-<text x="-5.5" y="-6.7" size="0.75" layer="25">Insert Leads This Side</text>
-</package>
-</packages>
-<symbols>
-<symbol name="J2">
-<pin name="P$1" x="-2.54" y="2.54" visible="off" length="short" rot="R270"/>
-<pin name="P$2" x="2.54" y="2.54" visible="off" length="short" rot="R270"/>
-<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.1778" layer="94"/>
-<wire x1="5.08" y1="0" x2="5.08" y2="-2.54" width="0.1778" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="-5.08" y2="-2.54" width="0.1778" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="0" width="0.1778" layer="94"/>
-<text x="-3.175" y="-1.905" size="1.27" layer="97">1         2</text>
-<text x="-5.08" y="-5.08" size="1.778" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-7.62" size="1.778" layer="96">OSTTC022162 TH</text>
-<text x="-5.08" y="-10.16" size="1.778" layer="96">Screw Terminal</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="OSTTC022162_TH">
-<gates>
-<gate name="G$1" symbol="J2" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="P1">
-<connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1160,7 +1111,6 @@ More EAGLE documentation at: http://www.element14.com/community/community/knode/
 </classes>
 <parts>
 <part name="PCB1" library="E14_Arduino_revC" deviceset="ARDUINO_MEGA2560" device=""/>
-<part name="DCVOLTAGELEVELSENSING" library=" 2-Pin Through-Hole Screw-Terminal" deviceset="OSTTC022162_TH" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1168,7 +1118,6 @@ More EAGLE documentation at: http://www.element14.com/community/community/knode/
 </plain>
 <instances>
 <instance part="PCB1" gate="G$1" x="71.12" y="58.42"/>
-<instance part="DCVOLTAGELEVELSENSING" gate="G$1" x="15.24" y="88.9" rot="R180"/>
 </instances>
 <busses>
 </busses>
